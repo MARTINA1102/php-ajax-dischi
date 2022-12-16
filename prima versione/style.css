@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header_nav{
+    padding: .5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: blue;
+    align-items: center;
+}
+.logo{
+    max-width: 50px;
+}
+main{
+    background-color: black;
+    padding: 3rem;
+    height: 100%;
+}
+.disco-img{
+    width: 200px;
+    height: 200px;
+}
+.cards{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.disco{
+    flex: 0 0 17%;
+    text-align: center;
+    padding: .5rem;
+    background-color: blue;
+}
+.titolo{
+    color: white;
+}
+.sub_tit{
+    color: gray;
+}

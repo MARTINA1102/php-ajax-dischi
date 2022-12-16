@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../prima versione/style.css">
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js" defer></script>
+	<script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header_nav">
+        <img class="logo" src="https://grafica-facile.com/wp-content/uploads/2022/01/spotify-logo.png" alt="logo">
+        <label for="select-genres">
+          <select id="select-genres"
+            v-model="genreFilter"
+            name="genre"
+            @change="genreChange">
+            <option value="All"> All Genres</option>
+            <option v-for="genre in genresList"
+              :key="genre"
+              :value="genre">
+              {{genre}}
+            </option>
+          </select>
+        </label>
+    </header>
+    <main id="app">
+        <div class="cards">
+            <div class="disco" v-for="disco in dischi" :key="disco.id">
+                <img class="disco-img" :src="disco.poster">
+                <h2 class="titolo">{{ disco.title }}</h2>
+                <p class="sub_tit">{{ disco.author }}</p>
+                <p class="sub_tit">{{ disco.year }}</p>
+            </div>
+        </div>
+	</main>
+    
+</body>
+</html>
